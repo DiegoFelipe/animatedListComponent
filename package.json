@@ -1,0 +1,24 @@
+{
+  "name": "animatedlistcomponent",
+  "version": "1.0.0",
+  "description": "A React Component that appends list items to a ul list with animation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src --out-file index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DiegoFelipe/animatedListComponent.git"
+  },
+  "author": "Diego Felipe (diegofelipe.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DiegoFelipe/animatedListComponent/issues"
+  },
+  "homepage": "https://github.com/DiegoFelipe/animatedListComponent#readme",
+  "peerDependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.3"
+  }
+}
