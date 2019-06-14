@@ -1,3 +1,2 @@
-import React from 'react'
-
-export default comp => 'Component'
+import React from 'react';
+export default (comp => 'Component');
