@@ -1,14 +1,26 @@
 import React from 'react'
+import Index from './Index.css'
 
-export default comp = props => {
-    return (
-        <>
-            <ul id="animatedlist" class="swing">
+const animatedlist = props => {
 
-            </ul>
-            <button id="animated-list-component-add-button">{props.button-text}
-            </button>
-        </>
-    )
+    handleClick = _ => {
 
+        var list = document.getElementById('animated-list-comp');
+        var newLI = document.createElement('li');
+        newLI.innerHTML = 'A new item';
+        list.appendChild(newLI);
+
+    }
+
+    
+        return ( 
+            <div>
+                <ul id="animated-list-comp" class="swing">
+                </ul>
+                <button id="animated-list-component-add-button" onChange={() => handleClick()}>{props.button-text}</button>
+            </div>
+        )
+    
 }
+
+export default animatedlist
