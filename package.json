@@ -1,6 +1,6 @@
 {
   "name": "animatedlistcomponent",
-  "version": "4.0.3",
+  "version": "5.0.5",
   "description": "A React Component that appends list items to a ul list with animation",
   "main": "index.js",
   "scripts": {
@@ -18,15 +18,13 @@
   },
   "homepage": "https://github.com/DiegoFelipe/animatedListComponent#readme",
   "peerDependencies": {
-    "react": "^16.6.1",
-    "react-dom": "^16.6.3"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",  
-    "@babel/preset-react": "^7.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "@babel/preset-react": "^7.0.0"
   }
 }
