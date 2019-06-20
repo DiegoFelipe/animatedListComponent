@@ -35,50 +35,60 @@ var Animatedlist = function Animatedlist(props) {
       items = _useState2[0],
       setItems = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      show = _useState4[0],
-      setShow = _useState4[1];
-
-  var _useState5 = (0, _react.useState)(0),
-      _useState6 = _slicedToArray(_useState5, 2),
-      count = _useState6[0],
-      setCount = _useState6[1]; // const listItems = items.map((item) => <li key={item.id}>{item.value}</li>)
-
-
   var addItem = function addItem() {
-    console.log('asdasd19');
-    return setItems([].concat(_toConsumableArray(items), [{
+    setItems([].concat(_toConsumableArray(items), [{
       id: items.length,
       value: 'New Item' + items.length,
-      "class": 'show'
+      "class": ''
     }]));
+    setTimeout(function () {
+      // newItems = [...items]
+      // newItems[newItems.length - 1].class = 'show'
+      // setItems(newItems)
+      // if(items.length == 1) {
+      //     setTimeout(() => {
+      //         items[0].class='show'
+      //     },1)
+      // }
+      console.log(items.length, items[0]["class"], 'piroca');
+      items[items.length - 1]["class"] = 'show'; // if(items[items.length-1].class != 'show')
+      // setItems(items)
+
+      console.log('inside additem');
+    }, 10);
   }; // useEffect(() => {
   //     console.log('before timeout')
   //     if(items.length > 0)
-  //         setTimeout(() => {
-  //             const newItems = items[items.length - 1].class = 'show'
-  //             console.log('inside effect')
-  //         }, 10)
+  //         // setTimeout(() => {
+  //         //     // newItems = [...items]
+  //         //     // newItems[newItems.length - 1].class = 'show'
+  //         //     // setItems(newItems)
+  //         //     // if(items.length == 1) {
+  //         //     //     setTimeout(() => {
+  //         //     //         items[0].class='show'
+  //         //     //     },1)
+  //         //     // }
+  //         //     console.log(items.length, items[0].class, 'piroca')
+  //         //     items[items.length-1].class = 'show'
+  //         //     // if(items[items.length-1].class != 'show')
+  //         //     // setItems(items)
+  //         //     // console.log('inside effect')
+  //         // }, 10)
   // })
 
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("ul", {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("button", {
+    onClick: function onClick() {
+      return addItem();
+    }
+  }, props.buttonText), _react["default"].createElement("ul", {
     className: "swing"
   }, items.map(function (item) {
     return _react["default"].createElement("li", {
       className: item["class"],
       key: item.id
     }, " ", item.value, " ");
-  })), _react["default"].createElement("button", {
-    onClick: function onClick() {
-      return addItem();
-    }
-  }, props.buttonText), _react["default"].createElement("p", null, "You clicked ", count, " times"), _react["default"].createElement("button", {
-    onClick: function onClick() {
-      return setCount(count + 1);
-    }
-  }));
+  })));
 };
 
 var _default = Animatedlist;

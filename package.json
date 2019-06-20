@@ -1,6 +1,6 @@
 {
   "name": "animatedlistcomponent",
-  "version": "5.0.5",
+  "version": "6.0.53",
   "description": "A React Component that appends list items to a ul list with animation",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",  
+    "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0"
   }
 }
